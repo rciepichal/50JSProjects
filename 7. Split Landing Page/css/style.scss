@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import 'variables';
+@import 'mixins';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  .split {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .left {
+    @include splitTransition;
+    left: 0;
+    background: url('../media/angular.svg') no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
+
+    &__header {
+      @include header;
+    }
+    &__btn {
+      @include btn;
+    }
+    &__btn:hover {
+      @include btnHover;
+    }
+  }
+  .left::before {
+    @include splitTransition;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $leftColor;
+  }
+  .right {
+    @include splitTransition;
+    right: 0;
+    background: url('../media/react.svg') no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
+    &__header {
+      @include header;
+    }
+    &__btn {
+      @include btn;
+    }
+    &__btn:hover {
+      @include btnHover;
+    }
+  }
+  .right::before {
+    @include splitTransition;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $rightColor;
+  }
+}
+
+.hover-left .left {
+  width: $hoverWidth;
+}
+.hover-left .right {
+  width: $otherWidth;
+}
+.hover-right .left {
+  width: $otherWidth;
+}
+.hover-right .right {
+  width: $hoverWidth;
+}
