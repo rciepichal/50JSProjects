@@ -1,53 +1,38 @@
 @import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Muli', sans-serif;
+  font-family: "Muli", sans-serif;
   background-image: url("ffflux.svg");
   background-size: cover;
   -webkit-animation: backgroundAnimate 15s infinite linear 0.1s;
           animation: backgroundAnimate 15s infinite linear 0.1s;
   color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
   overflow: hidden;
   margin: 0;
 }
-
 body .container {
   background: rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   border-radius: 10px;
   padding: 20px 40px;
 }
-
 body .container__h1 {
   text-align: center;
   margin-bottom: 30px;
 }
-
 body .container .form__control {
   position: relative;
   margin: 15px 0 25px 0;
   width: 300px;
 }
-
 body .container .form__control .form__input {
   background-color: transparent;
   border: 0;
@@ -58,32 +43,25 @@ body .container .form__control .form__input {
   font-size: 18px;
   color: #fff;
 }
-
 body .container .form__control .form__input:focus {
   outline: none;
   border-bottom-color: #30cfd0;
 }
-
 body .container .form__control .form__label {
   position: absolute;
   top: 15px;
   left: 0;
 }
-
 body .container .form__control .form__span {
   display: inline-block;
   font-size: 16px;
   min-width: 5px;
-  -webkit-transition: 0.3s cubic-bezier(0.68, 0.55, 0.265, 1.55);
   transition: 0.3s cubic-bezier(0.68, 0.55, 0.265, 1.55);
 }
-
 body .container .form__control .form__input:focus + label span {
   color: #30cfd0;
-  -webkit-transform: translateY(-30px);
-          transform: translateY(-30px);
+  transform: translateY(-30px);
 }
-
 body .container .form__btn {
   cursor: pointer;
   width: 100%;
@@ -94,17 +72,14 @@ body .container .form__btn {
   font-size: 1rem;
   letter-spacing: 1.5px;
 }
-
 body .container .form__btn:active {
   -webkit-animation: shake 0.5s 1;
           animation: shake 0.5s 1;
 }
-
 body .container .form__text {
   text-align: center;
   margin-top: 20px;
 }
-
 body .container .form__link {
   text-decoration: none;
   color: #30cfd0;
@@ -112,34 +87,27 @@ body .container .form__link {
 
 @-webkit-keyframes shake {
   0% {
-    -webkit-transform: rotate(-2deg);
-            transform: rotate(-2deg);
+    transform: rotate(-2deg);
   }
   50% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
+    transform: rotate(0);
   }
   100% {
-    -webkit-transform: rotate(2deg);
-            transform: rotate(2deg);
+    transform: rotate(2deg);
   }
 }
 
 @keyframes shake {
   0% {
-    -webkit-transform: rotate(-2deg);
-            transform: rotate(-2deg);
+    transform: rotate(-2deg);
   }
   50% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
+    transform: rotate(0);
   }
   100% {
-    -webkit-transform: rotate(2deg);
-            transform: rotate(2deg);
+    transform: rotate(2deg);
   }
 }
-
 @-webkit-keyframes backgroundAnimate {
   0% {
     background-position: 0% 0%;
@@ -175,7 +143,6 @@ body .container .form__link {
     background-position: 0% 0%;
   }
 }
-
 @keyframes backgroundAnimate {
   0% {
     background-position: 0% 0%;
@@ -210,5 +177,4 @@ body .container .form__link {
   100% {
     background-position: 0% 0%;
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
