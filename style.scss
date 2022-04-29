@@ -1,0 +1,43 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background: url('subtle-prism.svg');
+  background-size: cover;
+}
+.header {
+  background: rgb(34, 193, 195);
+  background: linear-gradient(0deg, rgba(34, 193, 195, 0) 0%, rgba(45, 77, 253, 1) 100%);
+  color: #fff;
+}
+.works {
+  &__element {
+    width: 250px;
+    height: 100px;
+    position: relative;
+    font-size: 1.5rem;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    span {
+      position: absolute;
+      opacity: 0.5;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 4.5rem;
+      font-family: monospace;
+    }
+    a {
+      z-index: 2;
+      text-decoration: none;
+      color: white;
+      transition: all 0.5s ease;
+      &:hover {
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+}

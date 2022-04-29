@@ -73,7 +73,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #dd1d1680;
+  background-color: rgba(221, 29, 22, 0.5019607843);
 }
 .wrapper .right {
   transition: all 0.7s ease-in-out;
@@ -120,7 +120,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #34a4dc80;
+  background-color: rgba(52, 164, 220, 0.5019607843);
 }
 
 .hover-left .left {
